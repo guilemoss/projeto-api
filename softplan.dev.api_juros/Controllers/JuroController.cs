@@ -17,7 +17,7 @@ namespace softplan.dev.api_juros.Controllers
         [Route("")]
         public ActionResult<decimal> GetTaxaJuros() 
         {
-            return _juroService.ObterTaxaJuro()*8;
+            return _juroService.ObterTaxaJuro();
         }
     }
 }
