@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  softplan.dev.api_gestao_juros:
+    image: gestaojuros
+    environment:
+      - JuroApiUrl=http://apijuros/
+    build:
+      context: .
+      dockerfile: softplan.dev.api_gestao_juros/Dockerfile
+    ports:
+      - "5000:5000"
+  softplan.dev.api_juros:
+    image: apijuros
+    build:
+      context: .
+      dockerfile: softplan.dev.api_juros/Dockerfile
+    ports:
+      - "6000:6000"
